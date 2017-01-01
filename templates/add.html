@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Thermos -- Add a URL
+{%  endblock %}
+
+{% block content %}
+    <section>
+        <h1>Add a new URL</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }} <!-- CSRF -->
+            <article>
+                <div class="form-group">
+                    <label>Title</label>
+                    <div class="input-group">
+                        {{ form.description(size = 50, class_="form-control fancy") }}
+                        <!-- <input type="text" class="form-control" name="description"> -->
+                    </div>                                                                     
+                </div> 
+                <div class="form-group">
+                    <label>URL</label>
+                    <div class="input-group">
+                        {{ form.url(size = 50, class_="form-control fancy") }}
+                        <!-- <input type="url" class="form-control" name="url"> -->
+                    </div>                                                                     
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+            </article>
+        </form>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

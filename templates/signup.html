@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block title %}
+Thermos -- Sign Up
+{%  endblock %}
+
+{% block content %}
+    <section>
+        <h1 style="clear:both">Create an account</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <table>
+                {{ render_field(form.username, size=50, class_="form-control fancy" ) }}
+                {{ render_field(form.email, size=50, class_="form-control fancy" ) }}
+                {{ render_field(form.password, size=50, class_="form-control fancy" ) }}
+                {{ render_field(form.password2, size=50, class_="form-control fancy" ) }}
+
+                <tr class="submit">
+                    <td></td>
+                    <td><button type="submit" class="btn btn-info">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
